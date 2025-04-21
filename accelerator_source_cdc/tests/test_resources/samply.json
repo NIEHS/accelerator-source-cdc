@@ -1,0 +1,111 @@
+[
+  {
+    "id": "wze2-5h6n",
+    "name": "Peracetic acid effects on human bronchial cells in an air liquid interface",
+    "attribution": null,
+    "attributionLink": null,
+    "category": "National Institute for Occupational Safety and Health",
+    "createdAt": "2025-04-03T14:32:27+0000",
+    "dataUpdatedAt": "2025-04-03T14:32:27+0000",
+    "dataUri": "https://data.cdc.gov/resource/wze2-5h6n",
+    "description": "Peracetic acid (PAA) is utilized as an industrial disinfectant for cleaning and sterilization of water infrastructure, food-safe machinery, surgical implements, and more. PAA typically exists as a mixture with hydrogen peroxide, acetic acid, water, and oxygen. These PAA cleaning solutions have been increasingly implemented in occupational settings due to their environmentally friendly decomposition products but the strong oxidative potential that allows them to effectively sanitize surfaces also underlies their ability to damage human airways. PAA mixtures are regarded as an asthmagen and occupational exposure has been associated with acute asthma-like symptoms such as airway and mucosal irritation, cough, wheeze, and shortness of breath. To evaluate the broad effects of PAA vapor exposure to human bronchial cells in vitro, normal human bronchial epithelial (NHBE) cells were cultured at the air-liquid interface (ALI) and exposures were conducted to PAA vapors during a four-hour exposure window at four concentrations: 0, 3, 12, and 24 ppm. Cells were allowed to recover for four and twenty-four hours to capture a spectrum of post-exposure response. Data was gathered for cytotoxicity, viability, cell layer integrity (via transepithelial electrical resistance measurements and qualitative histological observations), and protein response for proinflammatory mediators Endothelin-1 (ET-1), Interleukin-6 (IL-6), and Interleukin-8 (IL-8).",
+    "domain": "data.cdc.gov",
+    "externalId": null,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "license": null,
+    "metadataUpdatedAt": "2025-04-03T14:42:22+0000",
+    "provenance": "OFFICIAL",
+    "updatedAt": "2025-04-03T14:42:23+0000",
+    "webUri": "https://data.cdc.gov/d/wze2-5h6n",
+    "approvals": [
+      {
+        "reviewedAt": 1743691343,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 6826358,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1743691343,
+        "targetAudience": "public",
+        "workflowId": 2100,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1743691343,
+          "failureCount": 0,
+          "startedAt": 1743691343,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "6gky-eu6y",
+          "displayName": "kye1"
+        }
+      }
+    ],
+    "customFields": {
+      "Common Core": {
+        "Contact Email": "sa-cin-webteam@cdc.gov",
+        "Contact Name": "Health Effects Laboratory Research, Pathology and Physiology Research Branch",
+        "Program Code": "009:034",
+        "Bureau Code": "009:20"
+      }
+    },
+    "tags": null
+  },
+  {
+    "id": "766v-ysx3",
+    "name": "Mouse pulmonary response following solid surface composite dust inhalation",
+    "attribution": null,
+    "attributionLink": null,
+    "category": null,
+    "createdAt": "2025-04-02T18:49:36+0000",
+    "dataUpdatedAt": "2025-04-02T18:49:36+0000",
+    "dataUri": "https://data.cdc.gov/resource/766v-ysx3",
+    "description": "Solid surface composites (SSCs) are a widely used construction material that can generate dust and volatile organic chemicals (VOCs) during fabrication. Exposure to SSC dust has been linked to pulmonary health effects, including pulmonary fibrosis and lung inflammation. Previous studies have investigated the toxicity of SSC particles using in vitro and in vivo models, but these studies have limitations. For example, they often relied on pre-generated particles that may not accurately represent the size distribution and characteristics of aerosols encountered in real-world settings. Additionally, these models did not capture the co-exposure to VOCs that can occur during SSC fabrication.\nTo address these limitations, we developed a novel apparatus capable of real-time generation of SSC sawing particles and their simultaneous delivery to rodents via whole-body inhalation. This approach allows for a more accurate assessment of SSC toxicity under conditions that better reflect workplace exposure scenarios. The present study utilizes this system to characterize the acute pulmonary response in mice following a 4-day inhalation exposure to real-time generated SSC aerosols, with evaluations at 1, 6, 27, and 56 days post-exposure.",
+    "domain": "data.cdc.gov",
+    "externalId": null,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "license": null,
+    "metadataUpdatedAt": "2025-04-02T18:51:32+0000",
+    "provenance": "OFFICIAL",
+    "updatedAt": "2025-04-02T18:51:32+0000",
+    "webUri": "https://data.cdc.gov/d/766v-ysx3",
+    "approvals": [
+      {
+        "reviewedAt": 1743619892,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 6822052,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1743619892,
+        "targetAudience": "public",
+        "workflowId": 2100,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1743619892,
+          "failureCount": 0,
+          "startedAt": 1743619892,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "6gky-eu6y",
+          "displayName": "kye1"
+        }
+      }
+    ],
+    "customFields": {
+      "Common Core": {
+        "Contact Email": "sa-cin-webteam@cdc.gov",
+        "Contact Name": "Pathology and Physiology Branch, Health Effects Laboratory Division",
+        "Program Code": "009:034",
+        "Bureau Code": "009:20"
+      }
+    },
+    "tags": null
+  }]
