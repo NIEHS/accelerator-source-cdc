@@ -104,4 +104,5 @@ class CDCCrosswalk(Crosswalk):
         geospatial.spatial_coverage_other = cdc_single["geospatial data"].get("Geographic Unit of Analysis")
         geospatial.geospatial_resolution = cdc_single["geospatial data"].get("Geopatial Resolution")
 
-        return submission_info_model
+        #return submission_info_model
+        return mediate_resource

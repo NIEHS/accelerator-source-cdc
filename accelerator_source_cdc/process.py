@@ -71,7 +71,9 @@ def main(json_file: str = None, api_url: str = None, params: dict = None, type: 
     
     for doc in ingest_results.payload:
         #ingest_result = crosswalk.transform
-        print(f"Transformed entry: %s", doc.submitter_name)
+        #print(f"Transformed entry: %s", doc.submitter_name)
+        if doc.homepage is not None and doc.homepage != '':
+            print(f"Transformed entry homepage: s%",doc.homepage)
         #pass
 
 def abstruct_json_field(data: dict) -> 'CDCMetadata':
