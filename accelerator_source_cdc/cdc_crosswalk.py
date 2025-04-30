@@ -1,9 +1,8 @@
-from accelerator_core.workflow.accel_source_ingest import IngestSourceDescriptor
+import json
+import unittest
+from shlex import shlex
 
-from accelerator_core.workflow.accel_source_ingest import AccelIngestComponent
-from accelerator_core.workflow.crosswalk import Crosswalk
 import accelerator_core
-from cdc_metadata import CDCMetadata
 
 from accelerator_core.schema.models.accel_model import (
     AccelProgramModel,
@@ -23,6 +22,17 @@ from accelerator_core.schema.models.base_model import (
     SubmissionInfoModel,
     TechnicalMetadataModel,
 )
+#from accelerator_core.workflow.accel_source_ingest import IngestSourceDescriptor
+
+from accelerator_core.workflow.accel_source_ingest import AccelIngestComponent
+from accelerator_core.workflow.crosswalk import Crosswalk
+import accelerator_core
+from cdc_metadata import CDCMetadata
+from accelerator_core.utils import resource_utils
+#from accelerator_core.utils.accelerator_config import AcceleratorConfig
+#from accelerator_core.utils.schema_tools import SchemaTools
+from accelerator_core.schema.models.accel_model import build_accel_from_model
+
 
 class CDCCrosswalk(Crosswalk):
     """
@@ -90,6 +100,16 @@ class CDCCrosswalk(Crosswalk):
         mediate_resource.license = cdc_single["resource"].get("license")
         mediate_resource.resource_url = cdc_single["resource reference"].get("source link")
         
+        technical = TechnicalMetadataModel()
+        technical.original_source = "CDC technical"
+
+        data_resource = AccelDataResourceModel()
+        data_resource.exposure_media = ["cdc no media1"]
+        data_resource.measures = ["cdc no measure1"]
+        data_resource.measures_other = ["cdc no measure2"]
+        data_resource.time_extent_start = ""
+        data_resource.time_extent_end = ""
+
         publication = AccelPublicationModel()
         publication.citation = cdc_single["resource"].get("Suggested Citation")
         publication.citation_link = cdc_single["resource reference"].get("source link")
@@ -97,12 +117,35 @@ class CDCCrosswalk(Crosswalk):
         resource_reference = AccelResourceReferenceModel()
         resource_reference.resource_reference_text = cdc_single["resource reference"].get("source link")
         resource_reference.resource_reference_link = cdc_single["resource reference"].get("source link")
-   
+        
 
         geospatial = AccelGeospatialDataModel()
         geospatial.spatial_coverage = cdc_single["geospatial data"].get("Geographic Coverage")
         geospatial.spatial_coverage_other = cdc_single["geospatial data"].get("Geographic Unit of Analysis")
         geospatial.geospatial_resolution = cdc_single["geospatial data"].get("Geopatial Resolution")
 
-        #return submission_info_model
-        return mediate_resource
+        temporal = AccelTemporalDataModel()
+        temporal.temporal_resolution = ["res1"]
+        temporal.temporal_resolution_comment = "CDC comment"
+
+        population_data = AccelPopulationDataModel()
+        population_data.population_studies = ["CDC study1"]
+
+        rendered = build_accel_from_model(
+            version="1.0.0",
+            submission=submission_info_model,
+            technical=technical,
+            program=program,
+            project=project,
+            resource=mediate_resource,
+            data_resource=data_resource,
+            temporal=temporal,
+            geospatial=geospatial,
+            population=population_data,
+        )
+
+        schema_tools = SchemaTools(self.config)
+        result = schema_tools.validate_json_against_schema(
+            rendered, "accelerator", "1.0.0"
+        )
+        return result
