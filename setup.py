@@ -11,7 +11,7 @@ setup(
     author_email="mike.conway@nih.gov",
     url="https://github.com/szcc/accelerator-source-cdc",
     packages=find_packages(),
-    install_requires=install_requires,#[open("requirements.txt").read()],
+    install_requires=[open("requirements.txt").read()],
     license="BSD 3-Clause",
     classifiers=[
         "Programming Language :: Python :: 3",
