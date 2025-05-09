@@ -1,9 +1,6 @@
-from accelerator_core.workflow.accel_source_ingest import IngestSourceDescriptor
 
 from accelerator_core.workflow.accel_source_ingest import AccelIngestComponent
 from accelerator_core.workflow.crosswalk import Crosswalk
-import accelerator_core
-from cdc_metadata import CDCMetadata
 
 from accelerator_core.schema.models.accel_model import (
     AccelProgramModel,
