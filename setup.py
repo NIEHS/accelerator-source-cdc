@@ -4,7 +4,7 @@ with open("requirements.txt", "r") as f:
     install_requires = [line.strip() for line in f if line.strip()]
 
 setup(
-    name="accelerator-source-cdc",
+    name="accelerator_source_cdc",
     version="0.1.0",
     description="accelerator source cdc ingest",
     author="Mike Conway",
